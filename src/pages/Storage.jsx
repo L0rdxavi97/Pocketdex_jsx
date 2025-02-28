@@ -15,10 +15,10 @@ const Storage = ({}) => {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Escribe un nombre..."
-                    className="border p-2 rounded w-full"
+                    className="border p-2 rounded w-full bg-white"
                 />
                 {loading && <p className="text-gray-500">Cargando...</p>}
-                <ul className="border rounded mt-2 max-h-40 overflow-y-auto">
+                <ul className="border rounded mt-2 max-h-40 overflow-y-auto bg-white">
                     {results.map((name) => (
                         <li key={name} className="p-2 hover:bg-gray-200 cursor-pointer" onSelect={console.log(name)}>
                             {name}
