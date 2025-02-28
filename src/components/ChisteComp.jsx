@@ -5,7 +5,9 @@ function ChisteComp() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+  const fetchJoke = () => {
+    setLoading(true);
+    setError(null);
     fetch("https://v2.jokeapi.dev/joke/Any?lang=es")
       .then((response) => {
         if (!response.ok) {
@@ -21,6 +23,10 @@ function ChisteComp() {
         setError(error.message);
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchJoke();
   }, []);
 
   if (loading) return <p>Cargando chiste...</p>;
@@ -38,7 +44,12 @@ function ChisteComp() {
           {joke.delivery}
         </p>
       )}
-      <button className="text-white p-1 bg-red-400 hover:bg-red-500 rounded-2xl">Otro chiste</button>
+      <button 
+        className="text-white p-1 bg-red-400 hover:bg-red-500 rounded-2xl mt-3" 
+        onClick={fetchJoke}
+      >
+        Otro chiste
+      </button>
     </div>
   );
 }
