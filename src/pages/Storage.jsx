@@ -20,7 +20,7 @@ const Storage = ({}) => {
                 {loading && <p className="text-gray-500">Cargando...</p>}
                 <ul className="border rounded mt-2 max-h-40 overflow-y-auto">
                     {results.map((name) => (
-                        <li key={name} className="p-2 hover:bg-gray-200 cursor-pointer" onClick={console.log(this.value)}>
+                        <li key={name} className="p-2 hover:bg-gray-200 cursor-pointer" onClick={console.log(name)}>
                             {name}
                         </li>
                     ))}
