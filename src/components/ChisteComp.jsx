@@ -34,7 +34,7 @@ function ChisteComp() {
 
   return (
     <div className="p-3">
-      <h1 className="text-2xl underline font-bold text-center">Chiste Aleatorio</h1>
+      <h2 className="text-3xl underline font-bold text-center">Chiste Aleatorio</h2>
       {joke.type === "single" ? (
         <p>{joke.joke}</p>
       ) : (
@@ -45,7 +45,7 @@ function ChisteComp() {
         </p>
       )}
       <button 
-        className="text-white p-1 bg-red-400 hover:bg-red-500 rounded-2xl mt-3" 
+        className="text-white p-2 bg-red-400 hover:bg-red-500 rounded-xl mt-3" 
         onClick={fetchJoke}
       >
         Otro chiste
