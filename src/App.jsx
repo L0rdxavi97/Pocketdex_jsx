@@ -34,9 +34,7 @@ function App() {
           </nav>
         </header>
         <Routes>
-          <Route path="/" element={<Home
-          chiste={chiste}
-          ContarChiste={ContarChiste} />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/storage" element={<Storage />} />
           <Route path="/about" element={<About />} />
         </Routes>

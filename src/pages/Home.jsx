@@ -2,7 +2,7 @@ import React from 'react';
 
 import ChisteComp from '../components/ChisteComp';
 
-const Home = ({chiste, ContarChiste}) => {
+const Home = () => {
   return (
     <>
     <main className="flex flex-col justify-center text-center bg-amber-200 pt-3 gap-8 pb-8">
@@ -55,10 +55,9 @@ const Home = ({chiste, ContarChiste}) => {
                 <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-red-red-sprite.gif" alt="imagen red" id="red"/>
             </div>
         </div>
-        <ChisteComp
-            chiste={chiste}
-            ContarChiste={ContarChiste}
-        />
+        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3'>
+            <ChisteComp/>
+        </div>
     </main>
     </>
   );
