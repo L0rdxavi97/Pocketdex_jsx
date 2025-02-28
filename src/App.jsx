@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Storage from './pages/Storage.jsx';
-import About from './pages/About.jsx';
+import Users from './pages/Users.jsx';
+import Profile from './pages/Profile.jsx';
+import Exit from './pages/Exit.jsx';
 import Footer from './components/Footer.jsx'; 
 
 function App() {
@@ -22,13 +24,13 @@ function App() {
                 <Link to="/storage">Almacen</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
-                <Link to="/about">Usuarios</Link>
+                <Link to="/users">Usuarios</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
-                <Link to="/about">Perfil</Link>
+                <Link to="/profile">Perfil</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
-                <Link to="/about">Salir</Link>
+                <Link to="/exit">Salir</Link>
               </li>
             </ul>
           </nav>
@@ -36,7 +38,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/storage" element={<Storage />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/exit" element={<Exit />} />
         </Routes>
       </div>
     </Router>
