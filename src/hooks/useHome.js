@@ -1,36 +1,45 @@
+import { useState, useEffect } from "react";
 
-import { useEffect, useState } from "react"
+function useHome() {
+  const [joke, setJoke] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-export const useHome = () =>{
+  useEffect(() => {
+    fetch("https://v2.jokeapi.dev/joke/Any?lang=es")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error al obtener el chiste");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setJoke(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message);
+        setLoading(false);
+      });
+  }, []);
 
-    const initialChiste = () =>{
-        fetch('https://v2.jokeapi.dev/joke/Any?lang:es')
-            .then(res => res.json())
-            .then((result) =>{
-                return result;
-            })
-    }
+  if (loading) return <p>Cargando chiste...</p>;
+  if (error) return <p>Error: {error}</p>;
 
-    const [chiste,setchiste] = useState(initialChiste)
-    const [error, setError] = useState(null)
-    const [isLoaded, setIsLoaded] = useState(false)
-
-    function ContarChiste(){
-        useEffect(() => {
-            fetch('https://v2.jokeapi.dev/joke/Any?lang:es')
-            .then(res => res.json())
-            .then((result) =>{
-                setIsLoaded(true); 
-                setchiste(result);
-            },
-            (error) =>{
-                setIsLoaded(false);
-                setError(error);
-            } );
-        }, [])
-    }
-    return{
-        chiste,
-        ContarChiste
-    }
+  return (
+    <div>
+      <h1>😂 Chiste del día</h1>
+      {joke.type === "single" ? (
+        <p>{joke.joke}</p>
+      ) : (
+        <p>
+          <strong>{joke.setup}</strong>
+          <br />
+          {joke.delivery}
+        </p>
+      )}
+    </div>
+  );
 }
+
+export default useHome;

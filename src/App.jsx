@@ -4,11 +4,9 @@ import Home from './pages/Home.jsx';
 import Storage from './pages/Storage.jsx';
 import About from './pages/About.jsx';
 import Footer from './components/Footer.jsx'; 
-import { useHome } from './hooks/useHome.js';
 
 function App() {
 
-  const {chiste, ContarChiste} = useHome();
   return (
     <>
      <Router>
