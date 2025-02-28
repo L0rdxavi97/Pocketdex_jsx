@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home.jsx';
+import Storage from './pages/Storage.jsx';
 import About from './pages/About.jsx';
 import Footer from './components/Footer.jsx'; 
 import { useHome } from './hooks/useHome.js';
@@ -20,7 +21,7 @@ function App() {
                 <Link to="/">Inicio</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
-                <Link to="/about">Almacen</Link>
+                <Link to="/storage">Almacen</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
                 <Link to="/about">Usuarios</Link>
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<Home
           chiste={chiste}
           ContarChiste={ContarChiste} />} />
+          <Route path="/storage" element={<Storage />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
