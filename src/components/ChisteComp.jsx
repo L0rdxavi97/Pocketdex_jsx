@@ -27,7 +27,7 @@ function ChisteComp() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div className="p-3">
       <h1 className="text-2xl underline font-bold text-center">Chiste Aleatorio</h1>
       {joke.type === "single" ? (
         <p>{joke.joke}</p>
@@ -38,7 +38,7 @@ function ChisteComp() {
           {joke.delivery}
         </p>
       )}
-      <button className="text-white p-1 bg-red-400 hover:bg-red-500">Otro chiste</button>
+      <button className="text-white p-1 bg-red-400 hover:bg-red-500 rounded-2xl">Otro chiste</button>
     </div>
   );
 }
