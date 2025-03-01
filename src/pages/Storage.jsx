@@ -29,9 +29,11 @@ const Storage = ({}) => {
                 </ul>
             </div>
             <div>
-                <PokemonCard
-                    storage={storage}
-                />
+                {storage.map((pokemon) => (
+                    <PokemonCard
+                        pokemon={pokemon}
+                    />
+                ))}
             </div>
         </>
     )
