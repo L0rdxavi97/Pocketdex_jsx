@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import usePokemonSearch from "../hooks/usePokemonSearch";
 import { usePokemonStorage } from "../hooks/usePokemonStorage";
-import PokemonCard from "../components/PokemonCard";
+
 
 const Storage = ({}) => {
     const [query, setQuery] = useState("");
@@ -30,9 +30,9 @@ const Storage = ({}) => {
             </div>
             <div>
                 {storage.map((pokemon) => (
-                    <PokemonCard
-                        pokemon={pokemon}
-                    />
+                    <div key={pokemon} className="p-1 bg-amber-400">
+                        <h1>{pokemon}</h1>
+                    </div>
                 ))}
             </div>
         </>
