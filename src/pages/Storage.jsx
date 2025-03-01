@@ -27,11 +27,11 @@ const Storage = ({}) => {
                         </li>
                     ))}
                 </ul>
-                <div>
-                    <PokemonCard
-                        storage={storage}
-                    />
-                </div>
+            </div>
+            <div>
+                <PokemonCard
+                    storage={storage}
+                />
             </div>
         </>
     )
