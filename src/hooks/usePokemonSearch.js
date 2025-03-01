@@ -18,7 +18,7 @@ const usePokemonSearch = (query) => {
                 const filtered = data.results
                     .map(p => p.name)
                     .filter(name => name.includes(query.toLowerCase()))
-                    .slice(0, 10); // Máximo 10 resultados
+                    .slice(0, 10);
 
                 setResults(filtered);
             } catch (error) {
