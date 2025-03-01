@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import usePokemonSearch from "../hooks/usePokemonSearch";
 import { usePokemonStorage } from "../hooks/usePokemonStorage";
+import PokemonCard from "../components/PokemonCard";
 
 const Storage = ({}) => {
     const [query, setQuery] = useState("");
     const { results, loading } = usePokemonSearch(query);
-    const {addStorage} = usePokemonStorage();
+    const {storage,addStorage} = usePokemonStorage();
 
     return (
         <>
@@ -26,6 +27,11 @@ const Storage = ({}) => {
                         </li>
                     ))}
                 </ul>
+                <div>
+                    <PokemonCard
+                        storage={storage}
+                    />
+                </div>
             </div>
         </>
     )
