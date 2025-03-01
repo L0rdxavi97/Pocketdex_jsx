@@ -21,7 +21,7 @@ const Storage = ({}) => {
                 {loading && <p className="text-gray-500">Cargando...</p>}
                 <ul className="border rounded mt-2 max-h-40 overflow-y-auto bg-white">
                     {results.map((name) => (
-                        <li key={name} className="p-2 hover:bg-gray-200 cursor-pointer" onSelect={() => addStorage(name)}>
+                        <li key={name} className="p-2 hover:bg-gray-200 cursor-pointer" onClick={() => addStorage(name)}>
                             {name}
                         </li>
                     ))}
