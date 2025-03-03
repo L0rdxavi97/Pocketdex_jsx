@@ -25,7 +25,7 @@ function App() {
                 <Link to="/storage">Almacen</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
-                <Link to="/forum">Forum</Link>
+                <Link to="/forum">Foro</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
                 <Link to="/users">Usuarios</Link>
