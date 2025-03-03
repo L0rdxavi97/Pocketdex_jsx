@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Storage from './pages/Storage.jsx';
+import Forum from './pages/Forum.jsx';
 import Users from './pages/Users.jsx';
 import Profile from './pages/Profile.jsx';
 import Exit from './pages/Exit.jsx';
@@ -24,6 +25,9 @@ function App() {
                 <Link to="/storage">Almacen</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
+                <Link to="/forum">Forum</Link>
+              </li>
+              <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
                 <Link to="/users">Usuarios</Link>
               </li>
               <li className='hover:bg-red-400 text-xl p-2 rounded-xl hover:text-white'>
@@ -38,6 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/storage" element={<Storage />} />
+          <Route path="/forum" element={<Forum />} />
           <Route path="/users" element={<Users />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/exit" element={<Exit />} />
