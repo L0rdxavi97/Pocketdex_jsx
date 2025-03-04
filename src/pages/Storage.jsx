@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import usePokemonSearch from "../hooks/usePokemonSearch";
 import { usePokemonStorage } from "../hooks/usePokemonStorage";
+import PokemonCard from "../components/PokemonCard";
 
 
 const Storage = ({}) => {
@@ -21,18 +22,19 @@ const Storage = ({}) => {
                 />
                 {loading && <p className="text-gray-500">Cargando...</p>}
                 <ul className="border rounded mt-2 max-h-40 overflow-y-auto bg-white">
-                    {results.map((name) => (
-                        <li key={name} className="p-2 hover:bg-gray-200 cursor-pointer" onClick={() => addStorage(name)}>
-                            {name}
+                    {results.map((pokemon) => (
+                        <li key={pokemon} className="p-2 hover:bg-gray-200 cursor-pointer" onClick={() => addStorage(pokemon)}>
+                            {pokemon}
                         </li>
                     ))}
                 </ul>
             </div>
             <div>
                 {storage.map((pokemon) => (
-                    <div className="p-1 bg-amber-400">
-                        <h1>{pokemon}</h1>
-                    </div>
+                    <PokemonCard
+                        key={pokemon.name}
+                        pokemon={pokemon}
+                    />
                 ))}
             </div>
         </>
