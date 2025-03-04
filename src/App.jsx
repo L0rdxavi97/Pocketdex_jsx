@@ -18,22 +18,22 @@ function App() {
           <Link to="/"><img className='w-100 mx-1 bg-cyan-600 bg rounded-2xl shadow-[0_0_15px_6px_rgba(0,200,200,0.5)]' src="/img/rec/logo.png" alt=""/></Link>
           <nav className='items-center'>
             <ul className='flex flex-row align-middle gap-2 m-2'>
-              <li className='hover:bg-yellow-300 text-white text-xl font-bold p-2 rounded hover:text-black'>
+              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
                 <Link to="/">Inicio</Link>
               </li>
-              <li className='hover:bg-yellow-300 text-white text-xl font-bold p-2 rounded hover:text-black'>
+              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
                 <Link to="/storage">Almacen</Link>
               </li>
-              <li className='hover:bg-yellow-300 text-white text-xl font-bold p-2 rounded hover:text-black'>
+              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
                 <Link to="/forum">Foro</Link>
               </li>
-              <li className='hover:bg-yellow-300 text-white text-xl font-bold p-2 rounded hover:text-black'>
+              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
                 <Link to="/users">Usuarios</Link>
               </li>
-              <li className='hover:bg-yellow-300 text-white text-xl font-bold p-2 rounded hover:text-black'>
+              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
                 <Link to="/profile">Perfil</Link>
               </li>
-              <li className='hover:bg-yellow-300 text-white text-xl font-bold p-2 rounded hover:text-black'>
+              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
                 <Link to="/exit">Salir</Link>
               </li>
             </ul>
