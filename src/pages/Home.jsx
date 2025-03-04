@@ -21,7 +21,7 @@ const Home = () => {
             </ul>
             
         </div>
-        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3'>
+        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <h2 className='font-bold text-3xl underline'>Almacenamiento</h2>
             <h3 className='font-semibold my-5'>Seccion que permite la gestion de las criaturas de cada uno. 
                 Esta seccion nos permite la introduccion, visualizacion, modificacion y la eliminacion de las criaturas.</h3>
@@ -29,15 +29,15 @@ const Home = () => {
                     <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-squirtle-squad.gif" alt="imagen squad"/>
                 </div>
         </div>
-        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3'>
+        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <h2 className='font-bold text-3xl underline'>Foro</h2>
             <h3 className='font-semibold my-5'>Seccion que permite la comunicacion y expresión entre usuarios. 
                 Esta seccion nos permite poner posts y escribir respuestas a posts de otros usuarios.</h3>
                 <div>
-                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/i-will-get-you.gif" alt="imagen squad"/>
+                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/i-will-get-you.gif" alt="imagen battle"/>
                 </div>
         </div>
-        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3'>
+        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <h2 className='font-bold text-3xl underline'>Otros Usuarios</h2>
             <h3 className='font-semibold my-5'>Seccion que nos permite la visualizacion de los usuarios que utilizan el portal. 
                 Podremos visualizar los datos de cada usuario y su equipo.
@@ -46,16 +46,16 @@ const Home = () => {
                 <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-pokemon-trainer.gif" alt="imagen trainers"/>
             </div>
         </div>
-        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3'>
+        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <h2 className='font-bold text-3xl underline'>Perfil</h2>
             <h3 className='font-semibold my-5'>Seccion que nos permite la gestion o visualizacion de los datos del usuario.
                 En esta seccion tambien se puede gestionar el equipo personal de criaturas que tenemos.
             </h3>
             <div>
-                <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-red-red-sprite.gif" alt="imagen red" id="red"/>
+                <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-red-red-sprite.gif" alt="imagen red"/>
             </div>
         </div>
-        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3'>
+        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <ChisteComp/>
         </div>
     </main>

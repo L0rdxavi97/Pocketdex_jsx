@@ -33,8 +33,8 @@ function ChisteComp() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="p-3">
-      <h2 className="text-3xl underline font-bold text-center">Chiste Aleatorio</h2>
+    <div className="p-3 leading-8">
+      <h2 className="text-3xl underline font-bold text-center mb-3">Chiste Aleatorio</h2>
       {joke.type === "single" ? (
         <p>{joke.joke}</p>
       ) : (
