@@ -5,7 +5,7 @@ import ChisteComp from '../components/ChisteComp';
 const Home = () => {
   return (
     <>
-    <main className="flex flex-col justify-center text-center bg-yellow-300 pt-3 gap-8 pb-8">
+    <main className="flex flex-col justify-center text-center bg-cyan-600 pt-3 gap-8 pb-8">
         <h1 className='text-5xl font-bold'>Bienvenido a PocketDex</h1>
         <div>
             <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/tortank-pokémon.gif" alt="imagen blastoise shiny" id="red"/>
