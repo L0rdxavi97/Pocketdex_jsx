@@ -29,10 +29,10 @@ const Storage = ({}) => {
                     ))}
                 </ul>
             </div>
-            <div>
+            <div className="bg-amber-200 p-3 flex flex-wrap  gap-7 justify-center">
                 {storage.map((pokemon) => (
                     <PokemonCard
-                        key={pokemon.name}
+                        key={pokemon}
                         pokemon={pokemon}
                     />
                 ))}

@@ -1,11 +1,20 @@
-
+import { useEffect, useState } from "react";
 
 export default function PokemonCard({pokemon}){
+    const [sprite, setSprite] = useState("");
+
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+      .then((res) => res.json())
+      .then((data) =>setSprite(data.sprites.front_default))
+      .catch((error) => console.error("Error fetching Pokémon:", error));
+  }, [pokemon]);
+
     return(
         <>
-            <div className="p-1 bg-amber-400">
-                <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-                <p>{pokemon.name}</p>
+            <div className="p-1 bg-amber-100 rounded-2xl text-center">
+                <img className="size-30" src={sprite} alt={pokemon} />
+                <p className="font-bold text-xl underline">{pokemon}</p>
             </div>
         </>
     )
