@@ -16,7 +16,6 @@ const usePokemonSearch = (query) => {
                 const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000");
                 const data = await response.json();
                 const filtered = data.results
-                    /* .filter(pokemon => pokemon.name.includes(query.toLowerCase())) */
                     .map(p => p.name)
                     .filter(name => name.includes(query.toLowerCase()))
                     .slice(0, 10);

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Storage from './pages/Storage.jsx';
+import CreaturePage from './pages/CreaturePage.jsx';
 import Forum from './pages/Forum.jsx';
 import Users from './pages/Users.jsx';
 import Profile from './pages/Profile.jsx';
@@ -42,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/storage" element={<Storage />} />
+          <Route path="/storage/:PokeName" element={<CreaturePage />} />
           <Route path="/forum" element={<Forum />} />
           <Route path="/users" element={<Users />} />
           <Route path="/profile" element={<Profile />} />

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function PokemonCard({pokemon}){
     const [sprite, setSprite] = useState("");
@@ -14,7 +15,11 @@ export default function PokemonCard({pokemon}){
         <>
             <div className="p-1 bg-amber-100 rounded-2xl text-center">
                 <img className="size-30" src={sprite} alt={pokemon} />
-                <p className="font-bold text-xl underline">{pokemon}</p>
+                <Link to={`/storage/${pokemon}`}>
+                <p className="font-bold text-xl underline">
+                    {pokemon}
+                </p>
+                </Link>
             </div>
         </>
     )
