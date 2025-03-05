@@ -8,11 +8,13 @@ import Users from './pages/Users.jsx';
 import Profile from './pages/Profile.jsx';
 import Exit from './pages/Exit.jsx';
 import Footer from './components/Footer.jsx'; 
+import TituloPagina from './components/TituloPagina.jsx';
 
 function App() {
 
   return (
     <>
+     <TituloPagina/>
      <Router>
       <div>
         <header className='relative bg-cyan-700 flex lg:flex-row flex-col items-center justify-between py-3 shadow-md inset-shadow-amber-200'>
