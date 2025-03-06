@@ -17,11 +17,9 @@ export default function CreaturePage() {
     }
 
     return (
-        <div className="p-4 bg-amber-100 rounded-2xl text-center">
-            <img className="size-30" src={data.sprites.front_default} alt={data.name} />
-            <p className="font-bold text-xl underline">
-                {data.name}
-            </p>
+        <div className="py-5 bg-amber-100 flex flex-col justify-center items-center text-center">
+            <h1 className="font-bold text-5xl underline drop-shadow-2xl">{data.name.toUpperCase()}</h1>
+            <img className="size-50" src={data.sprites.front_default} alt={data.name} />
             {data.types.map((type) => 
                 <p className={'text-xl'}>
                     {type.type.name}
