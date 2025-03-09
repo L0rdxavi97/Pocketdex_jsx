@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ChisteComp from '../components/ChisteComp';
+import PokemonDelDia from '../components/PokemonDelDia';
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
             <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/tortank-pokémon.gif" alt="imagen blastoise shiny" id="red"/>
         </div>
         <div>
-            <h2 className='font-semibold text-2xl'>Esta pagina consiste en un portal de gestion de tus criaturas de bolsillo.</h2>
+            <h2 className='font-semibold text-2xl'>Esta pagina consiste en un portal de gestion de tus Pokémon.</h2>
             <h2 className='font-semibold text-2xl'>Este portal tiene las secciones de:</h2>
             <ul className='font-semibold text-2xl underline leading-10 mb-4'>
                 <li><h3>Almacenamiento</h3></li>
@@ -24,9 +25,9 @@ const Home = () => {
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <h2 className='font-bold text-3xl underline'>Almacenamiento</h2>
             <h3 className='font-semibold my-5'>Seccion que permite la gestion de las criaturas de cada uno. 
-                Esta seccion nos permite la introduccion, visualizacion, modificacion y la eliminacion de las criaturas.</h3>
+                Esta seccion nos permite la introduccion, visualizacion, modificacion y la eliminacion de los Pokémon.</h3>
                 <div>
-                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-squirtle-squad.gif" alt="imagen squad"/>
+                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out max-w-150' src="/img/rec/almacenamiento.jpeg" alt="imagen squad"/>
                 </div>
         </div>
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
@@ -43,17 +44,20 @@ const Home = () => {
                 Podremos visualizar los datos de cada usuario y su equipo.
             </h3>
             <div>
-                <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-pokemon-trainer.gif" alt="imagen trainers"/>
+                <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/entrenadores.gif" alt="imagen trainers"/>
             </div>
         </div>
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <h2 className='font-bold text-3xl underline'>Perfil</h2>
             <h3 className='font-semibold my-5'>Seccion que nos permite la gestion o visualizacion de los datos del usuario.
-                En esta seccion tambien se puede gestionar el equipo personal de criaturas que tenemos.
+                En esta seccion tambien se puede gestionar el equipo personal Pokémon que tenemos.
             </h3>
             <div>
                 <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-red-red-sprite.gif" alt="imagen red"/>
             </div>
+        </div>
+        <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
+            <PokemonDelDia/>
         </div>
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
             <ChisteComp/>
