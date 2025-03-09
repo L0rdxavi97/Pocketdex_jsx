@@ -18,7 +18,7 @@ const Storage = ({}) => {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Escribe un nombre..."
-                    className="border p-2 rounded w-full bg-white"
+                    className="border p-2 my-3 rounded w-full bg-white"
                 />
                 {loading && <p className="text-gray-500">Cargando...</p>}
                 <ul className="border rounded mt-2 max-h-40 overflow-y-auto bg-white">
@@ -29,13 +29,18 @@ const Storage = ({}) => {
                     ))}
                 </ul>
             </div>
-            <div className="bg-amber-200 p-3 flex flex-wrap  gap-7 justify-center">
-                {storage.map((pokemon) => (
-                    <PokemonCard
-                        key={pokemon}
-                        pokemon={pokemon}
-                    />
-                ))}
+            <div className="bg-amber-200 min-h-screen">
+            <h1 className="text-center text-3xl font-bold underline">Mis Pokémon</h1>
+                <div className="flex flex-wrap gap-7 justify-center p-3">
+                {
+                    storage.length === 0?
+                        <p className="font-medium">No tienes Pokémon en tu almacen</p>
+                        :
+                        storage.map((pokemon) => (
+                            <PokemonCard key={pokemon.name} pokemon={pokemon} />
+                        ))
+                }
+                </div>
             </div>
         </>
     )

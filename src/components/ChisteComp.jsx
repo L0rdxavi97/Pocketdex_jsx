@@ -45,7 +45,7 @@ function ChisteComp() {
         </p>
       )}
       <button 
-        className="text-white p-2 bg-red-400 hover:bg-red-500 rounded-xl mt-3" 
+        className="text-white p-2 bg-cyan-500 hover:bg-cyan-600 rounded-xl mt-3" 
         onClick={fetchJoke}
       >
         Otro chiste

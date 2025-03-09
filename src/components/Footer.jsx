@@ -10,8 +10,7 @@ export default function Footer(){
                 <h4>Canal de Denuncias</h4>
             </div>
             <div className="flex flex-col text-center my-3">
-                <h4>Este sitio web utiliza cookies para mejorar tu experiencia de usuario. Al continuar navegando, aceptas nuestra Política de Cookies.
-                </h4>
+                <h4>Este sitio web utiliza cookies para mejorar tu experiencia de usuario. Al continuar navegando, aceptas nuestra Política de Cookies.</h4>
                 <p>Copyright ©PocketDex 2024</p>
             </div>
             <div className="flex flex-row justify-center">

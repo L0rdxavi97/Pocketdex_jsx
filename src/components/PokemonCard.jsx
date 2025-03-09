@@ -13,8 +13,8 @@ export default function PokemonCard({pokemon}){
 
     return(
         <>
-            <div className="p-1 bg-amber-100 rounded-2xl text-center">
-                <img className="size-30" src={sprite} alt={pokemon} />
+            <div className="p-4 bg-amber-100 rounded-2xl text-center">
+                <img className="size-50" src={sprite} alt={pokemon} />
                 <Link to={`/storage/${pokemon}`}>
                 <p className="font-bold text-xl underline">
                     {pokemon}
