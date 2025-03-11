@@ -7,8 +7,13 @@ export const usePokemonStorage = () => {
     setStorage((prevStorage) => [...prevStorage, name]);
   }
 
+  function removeStorage(name) {
+    setStorage((prevStorage) => prevStorage.filter((pokemon) => pokemon!== name));
+  }
+
   return {
     storage,
-    addStorage
+    addStorage,
+    removeStorage
   };
 };

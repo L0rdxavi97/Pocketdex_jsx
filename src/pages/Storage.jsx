@@ -7,7 +7,7 @@ import PokemonCard from "../components/PokemonCard";
 const Storage = ({}) => {
     const [query, setQuery] = useState("");
     const { results, loading } = usePokemonSearch(query);
-    const {storage,addStorage} = usePokemonStorage();
+    const {storage,addStorage, removeStorage} = usePokemonStorage();
 
     return (
         <>
@@ -37,7 +37,7 @@ const Storage = ({}) => {
                         <p className="font-medium">No tienes Pokémon en tu almacen</p>
                         :
                         storage.map((pokemon) => (
-                            <PokemonCard key={pokemon.name} pokemon={pokemon} />
+                            <PokemonCard key={pokemon.name} pokemon={pokemon} remove={removeStorage}/>
                         ))
                 }
                 </div>
