@@ -20,7 +20,7 @@ export default function CreaturePage() {
     }, [PokeName]);
 
     if (!data) {
-        return <p>Loading...</p>;
+        return <p className="text-center text-2xl">Loading...</p>;
     }
 
     const getBackgroundColor = () => {
@@ -43,148 +43,102 @@ export default function CreaturePage() {
     };
 
     return (
-        <div className="py-5 bg-amber-100">
-            <div className={`p-4 flex flex-col justify-center items-center text-center w-1/2 mx-auto rounded-lg shadow-lg gap-4 ${getBackgroundColor()}`}>
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <h1 className="font-bold text-5xl underline drop-shadow-2xl">
-                        {data.name.toUpperCase()}
-                    </h1>
-                </div>
-                
-                <div className="p-3 bg-amber-100 rounded-xl w-md flex justify-center">
-                    <img className="size-50" src={data.sprites.front_default} alt={data.name} />
-                </div>
-                
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    {data.types.length > 1 ? <p className="text-2xl text-center underline mb-2 font-medium">Tipos:</p> : <p className="text-2xl text-center underline mb-2 font-medium">Tipo:</p>}
-                    {data.types.map((type) => 
-                        <p className='text-xl'>
-                            {type.type.name}
-                        </p>
-                    )}
-                </div>
+      <div className="py-5 bg-amber-100 min-h-screen flex justify-center px-4 md:px-0">
+        <div
+          className={`p-4 flex flex-col justify-center items-center text-center w-full max-w-2xl rounded-lg shadow-lg gap-4 ${getBackgroundColor()}`}
+        >
+          <div className="p-3 bg-amber-100 rounded-xl w-full">
+            <h1 className="font-bold text-4xl md:text-5xl underline drop-shadow-2xl">
+              {data.name.toUpperCase()}
+            </h1>
+          </div>
 
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <p className="text-2xl text-center underline mb-2 font-medium">
-                        Altura:
-                    </p>
-                    <p className='text-xl'>
-                        {data.height/10} m
-                    </p>
-                </div>
+          <div className="p-3 bg-amber-100 rounded-xl w-full flex justify-center">
+            <img
+              className="w-40 h-40 md:w-50 md:h-50"
+              src={data.sprites.front_default}
+              alt={data.name}
+            />
+          </div>
 
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <p className="text-2xl text-center underline mb-2 font-medium">
-                        Peso:
-                    </p>
-                    <p className='text-xl'>
-                        {data.weight/10} kg
-                    </p>
-                </div>
+          <div className="p-3 bg-amber-100 rounded-xl w-full">
+            <p className="text-2xl underline font-medium">
+              {data.types.length > 1 ? "Tipos:" : "Tipo:"}
+            </p>
+            {data.types.map((type) => (
+              <p className="text-xl mt-2" key={type.type.name}>
+                {type.type.name}
+              </p>
+            ))}
+          </div>
 
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <p className="text-2xl text-center underline mb-2 font-medium">
-                        Experiencia Base:
-                    </p>
-                    <p className='text-xl'>
-                        {data.base_experience} exp
-                    </p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+            <div className="p-3 bg-amber-100 rounded-xl">
+              <p className="text-2xl underline font-medium">Altura:</p>
+              <p className="text-xl my-2">{data.height / 10} m</p>
+            </div>
+            <div className="p-3 bg-amber-100 rounded-xl">
+              <p className="text-2xl underline font-medium">Peso:</p>
+              <p className="text-xl my-2">{data.weight / 10} kg</p>
+            </div>
+          </div>
 
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <p className="text-2xl text-center underline mb-2 font-medium">
-                        Habilidades:
-                    </p>
-                    <div className="flex justify-center">
-                        <ul className="list-disc list-inside text-left">
-                            {data.abilities.map((ability) => 
-                                <li key={ability.ability.name} className="text-xl">
-                                    {ability.ability.name}
-                                </li>
-                            )}
-                        </ul>
-                    </div>
-                </div>
+          <div className="p-3 bg-amber-100 rounded-xl w-full">
+            <p className="text-2xl underline font-medium">Experiencia Base:</p>
+            <p className="text-xl my-2">{data.base_experience} exp</p>
+          </div>
 
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <p className="text-2xl text-center underline mb-2 font-medium">
-                        Estadísticas:
-                    </p>
-                    <div className="flex justify-center">
-                        <ul className="list-disc list-inside text-left">
-                            {data.stats.map((stat) => 
-                                <li key={stat.stat.name} className="text-xl">
-                                    {stat.stat.name}: {stat.base_stat}
-                                </li>
-                            )}
-                        </ul>
-                    </div>
-                </div>
+          <div className="p-3 bg-amber-100 rounded-xl w-full flex flex-col items-center">
+            <p className="text-2xl underline font-medium">Habilidades:</p>
+            <ul className="list-disc list-inside text-left text-xl ">
+              {data.abilities.map((ability) => (
+                <li key={ability.ability.name}>{ability.ability.name}</li>
+              ))}
+            </ul>
+          </div>
 
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <p className="text-2xl text-center underline mb-2 font-medium">
-                        Movimientos:
-                    </p>
-                    <div className="flex justify-center">
-                        <ul className="list-disc list-inside text-left">
-                            {data.moves.map((move) => 
-                                <li key={move.move.name} className="text-xl">
-                                    {move.move.name}
-                                </li>
-                            )}
-                        </ul>
-                    </div>
-                </div>
+          <div className="p-3 bg-amber-100 rounded-xl w-full flex flex-col items-center">
+            <p className="text-2xl underline font-medium">Estadísticas:</p>
+            <ul className="list-disc list-inside text-left text-xl">
+              {data.stats.map((stat) => (
+                <li key={stat.stat.name}>
+                  {stat.stat.name}: {stat.base_stat}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                <div className="p-3 bg-amber-100 rounded-xl w-md">
-                    <p className="text-2xl text-center underline mb-2 font-medium">
-                        Sprites de Versiones:
-                    </p>
-                    <Swiper
-                        modules={[Navigation, Pagination]}
-                        spaceBetween={10}
-                        slidesPerView={3}
-                        navigation={{
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        }}
-                        pagination={{ clickable: true }}
-                        className="w-full"
-                    >
-                        {getSprites().map((sprite, index) => (
-                            <SwiperSlide key={index} className="flex justify-center">
-                                <img className="size-40" src={sprite} alt={`sprite-${index}`} />
-                            </SwiperSlide>
-                        ))}
-                        <div className="swiper-button-next custom-next"></div>
-                        <div className="swiper-button-prev custom-prev"></div>
-                    </Swiper>
-                </div>
+          <div className="p-3 bg-amber-100 rounded-xl w-full flex flex-col items-center">
+            <p className="text-2xl underline font-medium">Movimientos:</p>
+            <ul className="list-disc list-inside text-left text-xl">
+              {data.moves.slice(0, 10).map((move) => (
+                <li key={move.move.name}>{move.move.name}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="p-3 bg-amber-100 rounded-xl w-full">
+            <p className="text-2xl underline font-medium">Sprites de Versiones:</p>
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    breakpoints={{
+                        640: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 }
+                    }}
+                    navigation
+                    pagination={{ clickable: true }}
+                    className="w-full flex justify-center"
+                >
+                    {getSprites().map((sprite, index) => (
+                        <SwiperSlide key={index} className="flex justify-center items-center">
+                            <img className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-2xl border-2 border-black" src={sprite} alt={`sprite-${index}`} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </div>
+      </div>
     );
 }
-
-// Add custom styles for the navigation buttons
-const styles = `
-.custom-next, .custom-prev {
-    background-color: #000;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-
-.custom-next::after, .custom-prev::after {
-    font-size: 16px;
-}
-`;
-
-// Inject styles into the document head
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
-styleSheet.innerText = styles;
-document.head.appendChild(styleSheet);
