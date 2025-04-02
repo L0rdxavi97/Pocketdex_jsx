@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PostForm from '../components/PostForm';
+import PostForm from '../../components/Forum/PostForm';
+import Post from '../../components/Forum/Post';
 
 const Forum = () => {
   return (
@@ -9,6 +10,7 @@ const Forum = () => {
       <div className='my-4 text-center'>
         <h2 className="text-center text-3xl font-bold underline mb-4">Posts</h2>
         <p className="font-medium">No hay Posts</p>
+        <Post/>
       </div>
     </div>
   );

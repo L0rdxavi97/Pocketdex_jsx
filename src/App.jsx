@@ -1,14 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Storage from './pages/Storage.jsx';
-import CreaturePage from './pages/CreaturePage.jsx';
-import Forum from './pages/Forum.jsx';
-import Users from './pages/Users.jsx';
-import Profile from './pages/Profile.jsx';
+import Home from './pages/main/Home.jsx';
+import Storage from './pages/main/Storage.jsx';
+import CreaturePage from './pages/derivates/CreaturePage.jsx';
+import Forum from './pages/main/Forum.jsx';
+import Users from './pages/main/Users.jsx';
+import Profile from './pages/main/Profile.jsx';
 import Exit from './pages/Exit.jsx';
-import Footer from './components/Footer.jsx'; 
-import TituloPagina from './components/TituloPagina.jsx';
+import Footer from './components/shared/Footer.jsx'; 
+import TituloPagina from './components/shared/TituloPagina.jsx';
+import Login from './pages/previous/Login.jsx';
+import CreateUser from './pages/previous/CreateUser.jsx';
 
 function App() {
 
@@ -50,6 +52,8 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/exit" element={<Exit />} />
+          <Route path="/login" element={<Login />} />
+          .<Route path="/create-user" element={<CreateUser />} />
         </Routes>
       </div>
     </Router>
