@@ -9,8 +9,8 @@ import Profile from './pages/main/Profile.jsx';
 import Exit from './pages/Exit.jsx';
 import Footer from './components/shared/Footer.jsx'; 
 import TituloPagina from './components/shared/TituloPagina.jsx';
-import Login from './pages/previous/Login.jsx';
-import CreateUser from './pages/previous/CreateUser.jsx';
+/* import Login from './pages/previous/Login.jsx';
+import CreateUser from './pages/previous/CreateUser.jsx'; */
 
 function App() {
 
@@ -52,8 +52,8 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/exit" element={<Exit />} />
-          <Route path="/login" element={<Login />} />
-          .<Route path="/create-user" element={<CreateUser />} />
+          {/* <Route path="/login" element={<Login />} />
+          .<Route path="/create-user" element={<CreateUser />} /> */}
         </Routes>
       </div>
     </Router>
