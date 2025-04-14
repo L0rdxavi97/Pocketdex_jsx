@@ -38,7 +38,7 @@ const Home = () => {
             <h3 className='font-semibold my-5'>Seccion que permite la comunicacion y expresión entre usuarios. 
                 Esta seccion nos permite poner posts y escribir respuestas a posts de otros usuarios.</h3>
                 <div>
-                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/i-will-get-you.gif" alt="imagen battle"/>
+                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/i-will-get-you.webp" alt="imagen battle"/>
                 </div>
         </div>
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
