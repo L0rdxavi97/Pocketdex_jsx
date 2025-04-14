@@ -139,13 +139,13 @@ export default function CreaturePage() {
                 </Swiper>
             </div>
         </div>
-        {/* En términos de apareamiento entre humanos machos y Pokémon hembras, ¿Vaporeon es el Pokémon más compatible con los humanos? 
+        /* En términos de apareamiento entre humanos machos y Pokémon hembras, ¿Vaporeon es el Pokémon más compatible con los humanos? 
         No solo están en el grupo de huevos de campo, que está compuesto principalmente por mamíferos, sino que los Vaporeon miden un promedio de 3'03" de alto y pesan 63.9 libras. 
         Esto significa que son lo suficientemente grandes como para poder soportar penes humanos, y con sus impresionantes estadísticas base de PS y acceso a Armadura Ácida, puedes ser brusco con uno. 
         Debido a su biología principalmente acuática, no me cabe duda de que un Vaporeon excitado estaría increíblemente mojado, tan mojado que podrías tener sexo con uno durante horas sin que te duelan los músculos. 
         También pueden aprender los movimientos Atracción, Ojos de muñeca, Cautivar, Encanto y Latigazo, además de no tener pelaje que oculte los pezones, así que sería increíblemente fácil que uno te ponga cachondo. 
         Con sus habilidades Absorbe Agua e Hidratación, pueden recuperarse fácilmente del cansancio con suficiente agua. Ningún otro Pokémon se acerca a este nivel de compatibilidad. Además, dato curioso, si te lo haces lo suficiente, puedes hacer que tu Vaporeon se ponga blanco. 
-        Vaporeon está literalmente hecho para el pene humano. Estadísticas de defensa increíbles + alto HP + Armadura Ácida significa que puede aguantar toda la polla del día, de todas las formas y tamaños, y aún así pedir más. */}
+        Vaporeon está literalmente hecho para el pene humano. Estadísticas de defensa increíbles + alto HP + Armadura Ácida significa que puede aguantar toda la polla del día, de todas las formas y tamaños, y aún así pedir más. */
       </div>
     );
 }
