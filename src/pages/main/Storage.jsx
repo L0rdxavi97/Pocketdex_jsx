@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import usePokemonSearch from "../hooks/usePokemonSearch";
-import { usePokemonStorage } from "../hooks/usePokemonStorage";
-import PokemonCard from "../components/PokemonCard";
+import usePokemonSearch from "../../hooks/storage/usePokemonSearch";
+import { usePokemonStorage } from "../../hooks/storage/usePokemonStorage";
+import PokemonCard from "../../components/storage/PokemonCard";
 
 
 const Storage = ({}) => {

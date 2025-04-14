@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ChisteComp from '../components/ChisteComp';
-import PokemonDelDia from '../components/PokemonDelDia';
+import ChisteComp from '../../components/home/ChisteComp';
+import PokemonDelDia from '../../components/home/PokemonDelDia';
 
 const Home = () => {
   return (
