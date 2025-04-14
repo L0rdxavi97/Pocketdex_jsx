@@ -12,7 +12,7 @@ const Home = () => {
         Así que, básicamente, Pokémon es el resultado de su amor por los bichitos. ¡Hazte con todos, toma un nuevo significado! */}
         <h1 className='text-5xl font-bold'>Bienvenido a PocketDex</h1>
         <div>
-            <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/tortank-pokémon.gif" alt="imagen blastoise shiny" id="red"/>
+            <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/tortank-pokémon.webp" alt="imagen blastoise shiny" id="red"/>
         </div>
         <div>
             <h2 className='font-semibold text-2xl'>Esta pagina consiste en un portal de gestion de tus Pokémon.</h2>
@@ -30,7 +30,7 @@ const Home = () => {
             <h3 className='font-semibold my-5'>Seccion que permite la gestion de las criaturas de cada uno. 
                 Esta seccion nos permite la introduccion, visualizacion, modificacion y la eliminacion de los Pokémon.</h3>
                 <div>
-                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out max-w-150' src="/img/rec/almacenamiento.jpeg" alt="imagen squad"/>
+                    <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out max-w-150' src="/img/rec/almacenamiento.webp" alt="imagen squad"/>
                 </div>
         </div>
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
@@ -47,7 +47,7 @@ const Home = () => {
                 Podremos visualizar los datos de cada usuario y su equipo.
             </h3>
             <div>
-                <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/entrenadores.gif" alt="imagen trainers"/>
+                <img className='justify-self-center rounded-2xl hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300 ease-in-out' src="/img/rec/entrenadores.webp" alt="imagen trainers"/>
             </div>
         </div>
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>
@@ -56,7 +56,7 @@ const Home = () => {
                 En esta seccion tambien se puede gestionar el equipo personal Pokémon que tenemos.
             </h3>
             <div>
-                <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-red-red-sprite.gif" alt="imagen red"/>
+                <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/pokemon-red-red-sprite.webp" alt="imagen red"/>
             </div>
         </div>
         <div className='bg-amber-100 lg:m-auto m-8 rounded-2xl p-3 lg:w-4xl'>

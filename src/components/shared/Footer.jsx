@@ -14,10 +14,10 @@ export default function Footer(){
                 <p>Copyright ©PocketDex 2024</p>
             </div>
             <div className="flex flex-row justify-center">
-                <a href="https://x.com/javieraxedo"><img src="/img/rec/twitter.png"  alt="imagen twitter"/></a>
-                <a href="https://www.instagram.com/lordxavi97"><img src="/img/rec/instagram.png" alt="imagen instagram"/></a>
-                <a href="https://www.linkedin.com/in/javier-acedo-caballero-5707562b8/"><img src="/img/rec/linkedin.png" alt="imagen linkedin"/></a>
-                <a href="https://github.com/L0rdxavi97"><img src="/img/rec/github.png"  alt="imagen github"/></a>
+                <a href="https://x.com/javieraxedo"><img src="/img/rec/twitter.webp"  alt="imagen twitter"/></a>
+                <a href="https://www.instagram.com/lordxavi97"><img src="/img/rec/instagram.webp" alt="imagen instagram"/></a>
+                <a href="https://www.linkedin.com/in/javier-acedo-caballero-5707562b8/"><img src="/img/rec/linkedin.webp" alt="imagen linkedin"/></a>
+                <a href="https://github.com/L0rdxavi97"><img src="/img/rec/github.webp"  alt="imagen github"/></a>
             </div>
         </footer>
     )
