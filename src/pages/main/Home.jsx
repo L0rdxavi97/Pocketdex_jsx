@@ -7,6 +7,8 @@ const Home = () => {
   return (
     <>
     <main className="flex flex-col justify-center text-center bg-amber-200 pt-3 gap-8 pb-8">
+        {/*  El genio detrás de Pokémon, Satoshi Tajiri, era coleccionista de insectos en su infancia. 
+        Así que, básicamente, Pokémon es el resultado de su amor por los bichitos. ¡Hazte con todos, toma un nuevo significado! */}
         <h1 className='text-5xl font-bold'>Bienvenido a PocketDex</h1>
         <div>
             <img className='justify-self-center h-40 hover:-translate-y-1 hover:scale-130 transition delay-150 duration-300 ease-in-out' src="/img/rec/tortank-pokémon.gif" alt="imagen blastoise shiny" id="red"/>

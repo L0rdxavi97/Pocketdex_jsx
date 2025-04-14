@@ -13,6 +13,8 @@ const Storage = ({}) => {
         <>
             <div className="p-4 bg-amber-200">
                 <h2 className="text-xl font-bold">Introducir Pokémon</h2>
+                {/* ¿Sabías que las regiones de Pokémon, como Kanto y Galar, están inspiradas en lugares reales? 
+                Desde Japón hasta el Reino Unido, cada región tiene su propia conexión con el mundo real. */}
                 <input
                     type="text"
                     value={query}
