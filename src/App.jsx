@@ -6,9 +6,11 @@ import CreaturePage from './pages/derivates/CreaturePage.jsx';
 import Forum from './pages/main/Forum.jsx';
 import Users from './pages/main/Users.jsx';
 import Profile from './pages/main/Profile.jsx';
-import Exit from './pages/Exit.jsx';
+import Login from './pages/previous/Login.jsx';
+import CreateUser from './pages/previous/CreateUser.jsx';
 import Footer from './components/shared/Footer.jsx'; 
 import TituloPagina from './components/shared/TituloPagina.jsx';
+import { useAuth } from './hooks/login/AuthContext.jsx';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,6 +18,8 @@ function App() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const { user, logout } = useAuth(); // obtenemos el usuario
 
   return (
     <>
@@ -38,21 +42,35 @@ function App() {
               <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
                 <Link to="/">Inicio</Link>
               </li>
-              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
-                <Link to="/storage">Almacen</Link>
-              </li>
-              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
-                <Link to="/forum">Foro</Link>
-              </li>
-              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
-                <Link to="/users">Usuarios</Link>
-              </li>
-              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
-                <Link to="/profile">Perfil</Link>
-              </li>
-              <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
-                <Link to="/exit">Salir</Link>
-              </li>
+              {user && (
+                <>
+                  <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
+                    <Link to="/storage">Almacen</Link>
+                  </li>
+                  <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
+                    <Link to="/forum">Foro</Link>
+                  </li>
+                  <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
+                    <Link to="/users">Usuarios</Link>
+                  </li>
+                  <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
+                    <Link to="/profile">Perfil</Link>
+                  </li>
+                  <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black' onClick={logout}>
+                    <Link to="/">Salir</Link>
+                  </li>
+                </>
+              )}
+              {!user && (
+                <>
+                  <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
+                    <Link to="/login">Iniciar Sesión</Link>
+                  </li>
+                  <li className='hover:bg-cyan-300 hover:opacity-50 text-white text-xl font-bold p-2 rounded hover:text-black'>
+                    <Link to="/createuser">Crear Cuenta</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
 
@@ -64,7 +82,8 @@ function App() {
               <Route path="/forum" element={<Forum />} />
               <Route path="/users" element={<Users />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/exit" element={<Exit />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/createuser" element={<CreateUser />} />
             </Routes>
           </div>
         </div>

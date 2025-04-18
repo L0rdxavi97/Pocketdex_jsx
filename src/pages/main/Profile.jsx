@@ -10,7 +10,7 @@ const Profile = () => {
         <h1 className="text-2xl font-bold">Mi Perfil</h1>
         <img
           className="max-h-50"
-          src="/img/usuarios/default-user.jpg"
+          src="/img/rec/default-user.webp"
           alt="user img"
         />
         <p className="font-medium">Nombre: Juan Pérez</p>
@@ -22,7 +22,7 @@ const Profile = () => {
           <div className="p-4 bg-amber-100 rounded-2xl text-center">
             <img
               className="max-h-50"
-              src="/img/criaturas/default-creature.jpg"
+              src="/img/rec/default-creature.webp"
               alt="pokemon img"
             />
             <p className="font-bold text-xl underline">Pokemon</p>
@@ -30,7 +30,7 @@ const Profile = () => {
           <div className="p-4 bg-amber-100 rounded-2xl text-center">
             <img
               className="max-h-50"
-              src="/img/criaturas/default-creature.jpg"
+              src="/img/rec/default-creature.webp"
               alt="pokemon img"
             />
             <p className="font-bold text-xl underline">Pokemon</p>
@@ -38,7 +38,7 @@ const Profile = () => {
           <div className="p-4 bg-amber-100 rounded-2xl text-center">
             <img
               className="max-h-50"
-              src="/img/criaturas/default-creature.jpg"
+              src="/img/rec/default-creature.webp"
               alt="pokemon img"
             />
             <p className="font-bold text-xl underline">Pokemon</p>
@@ -46,7 +46,7 @@ const Profile = () => {
           <div className="p-4 bg-amber-100 rounded-2xl text-center">
             <img
               className="max-h-50"
-              src="/img/criaturas/default-creature.jpg"
+              src="/img/rec/default-creature.webp"
               alt="pokemon img"
             />
             <p className="font-bold text-xl underline">Pokemon</p>
@@ -54,7 +54,7 @@ const Profile = () => {
           <div className="p-4 bg-amber-100 rounded-2xl text-center">
             <img
               className="max-h-50"
-              src="/img/criaturas/default-creature.jpg"
+              src="/img/rec/default-creature.webp"
               alt="pokemon img"
             />
             <p className="font-bold text-xl underline">Pokemon</p>
@@ -62,7 +62,7 @@ const Profile = () => {
           <div className="p-4 bg-amber-100 rounded-2xl text-center">
             <img
               className="max-h-50"
-              src="/img/criaturas/default-creature.jpg"
+              src="/img/rec/default-creature.webp"
               alt="pokemon img"
             />
             <p className="font-bold text-xl underline">Pokemon</p>
